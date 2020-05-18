@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assemble.mova.controller.AdminController">
+   <children>
+        <Pane prefHeight="145.0" prefWidth="1280.0" styleClass="head-background" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="88.0" layoutY="51.0" text="MOVA" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="104.0" text="Since 2019" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginBtn" layoutX="1170.0" layoutY="101.0" mnemonicParsing="false" onAction="#loginPage" text="로그아웃" />
+            <Label fx:id="loginId" layoutX="1085.0" layoutY="103.0" text="로그인명" textFill="WHITE">
+               <font>
+                  <Font name="NanumSquare ExtraBold" size="14.0" />
+               </font>
+            </Label> 
+         </children>
+      </Pane>
+      <VBox layoutY="145.0" prefHeight="576.0" prefWidth="569.0">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="558.0" />
+            <GridPane prefHeight="526.0" prefWidth="608.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="139.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="527.0" minWidth="10.0" prefWidth="430.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="343.0" minHeight="10.0" prefHeight="330.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="311.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="229.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="영화 포스터" GridPane.columnIndex="1" />
+                  <Button fx:id="chooseBtn" mnemonicParsing="false" onAction="#fileChoose" text="이미지 찾기" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="300.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <ImageView fx:id="posterImg" fitHeight="302.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox layoutX="537.0" layoutY="145.0" prefHeight="576.0" prefWidth="744.0">
+         <children>
+            <Pane prefHeight="86.0" prefWidth="744.0" />
+            <GridPane prefHeight="528.0" prefWidth="744.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="123.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="617.0" minWidth="10.0" prefWidth="109.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="617.0" minWidth="10.0" prefWidth="395.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="617.0" minWidth="10.0" prefWidth="152.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="82.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="177.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="219.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="322.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="322.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="304.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="영화 코드:" GridPane.columnIndex="1" />
+                  <Label text="엉화 제목:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="영화 출연진:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="영화 장르:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="영화 개봉일:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="영화 줄거리:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="tMoveCode" text="mv000" GridPane.columnIndex="2" />
+                  <TextField fx:id="tTitle" text="" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="tCast" text="" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="tGenre" text="" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="tYear" text="" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextArea fx:id="tStory" prefHeight="200.0" prefWidth="200.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveAction" text="저장하기" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="300.0" />
+                     </GridPane.margin>s
+                  </Button>
+                  <Label  text="저장 위치:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label prefHeight="15.0" text="" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="lImgPath" prefHeight="15.0" prefWidth="368.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

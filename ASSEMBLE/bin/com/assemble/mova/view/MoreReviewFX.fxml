@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assemble.mova.controller.MoreReviewController">
+
+	<children>
+		<Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1280.0" styleClass="head-background" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label layoutX="88.0" layoutY="51.0" text="MOVA" textFill="WHITE">
+					<font>
+						<Font size="39.0" />
+					</font>
+				</Label>
+				<Label layoutX="91.0" layoutY="104.0" text="Since 2019" textFill="WHITE">
+					<font>
+						<Font size="13.0" />
+					</font>
+				</Label>
+				<Button fx:id="detailBtn" layoutX="1170.0" layoutY="101.0" mnemonicParsing="false" onAction="#detailPage" text="디테일홈" />
+            <Label fx:id="loginId" layoutX="1079.0" layoutY="103.0" text="로그인명" textFill="WHITE">
+               <font>
+                  <Font name="NanumBarunGothic" size="14.0" />
+               </font>
+            </Label>
+			</children>
+		</Pane>
+      <VBox alignment="TOP_CENTER" layoutY="145.0" prefHeight="581.0" prefWidth="1280.0">
+         <children>
+            <Pane prefHeight="55.0" prefWidth="1280.0" />
+            <GridPane prefHeight="459.0" prefWidth="1280.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="0.0" prefWidth="139.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="721.0" minWidth="10.0" prefWidth="507.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.0" minWidth="10.0" prefWidth="106.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.0" minWidth="10.0" prefWidth="489.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="106.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="110.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="287.0" minHeight="0.0" prefHeight="125.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="298.0" minHeight="9.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="329.0" minHeight="0.0" prefHeight="125.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="329.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox fx:id="vboxBtn1" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="choiceBtn1" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="142.0" text="  ">
+                           <VBox.margin>
+                              <Insets left="350.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="idLabel1" text="" />
+                        <TextArea fx:id="textArea1" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxBtn2" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="choiceBtn2" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="142.0" text="  ">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="350.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="idLabel2" text="" />
+                        <TextArea fx:id="textArea2" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxBtn3" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label fx:id="choiceBtn3" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="142.0" text="  ">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="350.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="idLabel3" text="" />
+                        <TextArea fx:id="textArea3" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxBtn4" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="choiceBtn4" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="142.0" text="  ">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="350.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="idLabel4" text="" />
+                        <TextArea fx:id="textArea4" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxBtn5" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="choiceBtn5" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="142.0" text="  ">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="350.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="idLabel5" text="" />
+                        <TextArea fx:id="textArea5" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxBtn6" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <Label fx:id="choiceBtn6" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="15.0" prefWidth="142.0" text="  ">
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="350.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="idLabel6" text="" />
+                        <TextArea fx:id="textArea6" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+	</children>
+</AnchorPane>

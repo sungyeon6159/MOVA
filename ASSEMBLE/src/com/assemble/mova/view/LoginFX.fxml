@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assemble.mova.controller.LoginController">
+   <children>
+        <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1280.0" styleClass="head-background" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="88.0" layoutY="51.0" text="MOVA" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="104.0" text="Since 2019" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label> 
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" layoutY="145.0" prefHeight="577.0" prefWidth="1280.0">
+         <children>
+            <VBox prefHeight="577.0" prefWidth="260.0">
+               <children>
+                  <Text fill="#1f459e" strokeType="OUTSIDE" strokeWidth="0.0" text="로그인" textAlignment="CENTER" wrappingWidth="307.0">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" top="100.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="txtId" alignment="TOP_CENTER" prefHeight="35.0" prefWidth="314.0" promptText="아이디">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="txtPw" alignment="TOP_CENTER" prefHeight="35.0" prefWidth="314.0" promptText="비밀번호">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickLoinBtn" prefHeight="35.0" prefWidth="314.0" text="로그인" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="OR">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="145.0" right="145.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="계정이 없으신가요?" textAlignment="CENTER" wrappingWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="btnJoin" mnemonicParsing="false" onAction="#clickJoinBtn" prefHeight="35.0" prefWidth="314.0" text="회원가입">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

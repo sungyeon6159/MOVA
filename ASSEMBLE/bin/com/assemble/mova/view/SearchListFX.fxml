@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assemble.mova.controller.SearchListController">
+	<children>
+		<Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1280.0" styleClass="head-background" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label layoutX="88.0" layoutY="51.0" text="MOVA" textFill="WHITE">
+					<font>
+						<Font size="39.0" />
+					</font>
+				</Label>
+				<Label layoutX="91.0" layoutY="104.0" text="Since 2019" textFill="WHITE">
+					<font>
+						<Font size="13.0" />
+					</font>
+				</Label>
+				<Button fx:id="search1" layoutX="1170.0" layoutY="101.0" mnemonicParsing="false" onAction="#searchPage" text="메인홈" />
+            <Label fx:id="loginId" layoutX="1070.0" layoutY="104.0" text="로그인명" textFill="WHITE">
+               <font>
+                  <Font name="NanumBarunGothic" size="14.0" />
+               </font>
+            </Label>
+			</children>
+		</Pane>
+      <VBox alignment="TOP_CENTER" layoutY="145.0" prefHeight="581.0" prefWidth="1280.0">
+         <children>
+            <Pane prefHeight="55.0" prefWidth="1280.0" />
+            <GridPane alignment="CENTER" prefHeight="359.0" prefWidth="1280.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="100.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="10.0" prefWidth="300.0" />
+                <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="940.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="940.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="940.0" minWidth="10.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="202.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="277.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="225.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="203.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <ImageView fitHeight="206.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+               
+                  <VBox fx:id="vboxBtn01" alignment="CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle01" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="sImg01" fitHeight="217.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/movie1.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="dBtn1" mnemonicParsing="false" onAction="#onePage" prefHeight="23.0" prefWidth="150.0" text="제목 상세페이지" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+                <VBox fx:id="vboxBtn02" alignment="CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle02" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="sImg02" fitHeight="217.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/movie1.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="dBtn2" mnemonicParsing="false" onAction="#twoPage" prefHeight="23.0" prefWidth="150.0" text="제목 상세페이지" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+                  <VBox fx:id="vboxBtn03" alignment="CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle03" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="sImg03" fitHeight="217.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/movie1.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="dBtn3" mnemonicParsing="false" onAction="#threePage" prefHeight="23.0" prefWidth="150.0" text="제목 상세페이지" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+                             <VBox fx:id="vboxBtn04" alignment="CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle04" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="sImg04" fitHeight="217.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/movie1.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="dBtn4" mnemonicParsing="false" onAction="#fourPage" prefHeight="23.0" prefWidth="150.0" text="제목 상세페이지" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+          		  <VBox fx:id="vboxBtn05" alignment="CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle05" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="sImg05" fitHeight="217.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../img/movie1.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button fx:id="dBtn5" mnemonicParsing="false" onAction="#fivePage" prefHeight="23.0" prefWidth="150.0" text="제목 상세페이지" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+               </children>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+	</children>
+</AnchorPane>

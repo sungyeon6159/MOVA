@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assemble.mova.controller.DetailController">
+   <children>
+        <Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1280.0" styleClass="head-background" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="88.0" layoutY="51.0" text="MOVA" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="104.0" text="Since 2019" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="refreshBtn" layoutX="1170.0" layoutY="101.0" mnemonicParsing="false" onAction="#refreshPage" text="새로고침" />
+            <Button fx:id="searchBtn" layoutX="1101.0" layoutY="101.0" mnemonicParsing="false" onAction="#searchPage" text="메인홈" />
+            <Button fx:id="loginBtn" layoutX="1015.0" layoutY="101.0" mnemonicParsing="false" onAction="#loginPage" text="로그아웃" />
+            <Label fx:id="loginId" layoutX="923.0" layoutY="104.0" text="로그인명" textFill="WHITE">
+               <font>
+                  <Font name="NanumGothicBold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         
+      </Pane>
+      <HBox layoutY="143.0" prefHeight="577.0" prefWidth="1280.0">
+         <children>
+            <VBox prefHeight="577.0" prefWidth="675.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="279.0" prefWidth="675.0">
+                     <children>
+                        <VBox prefHeight="272.0" prefWidth="272.0">
+                           <children>
+                              <GridPane prefHeight="217.0" prefWidth="283.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="62.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="210.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="39.0" minHeight="12.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="61.0" minHeight="12.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="76.0" minHeight="12.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="83.0" minHeight="12.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="83.0" minHeight="12.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="제목:" />
+                                    <Label fx:id="title" text="투루먼쇼" GridPane.columnIndex="1" />
+                                   
+                                    <Label text="감독:" GridPane.rowIndex="1" />
+                                    <Label fx:id="cast" text="피터 위어" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                   
+                                    <Label text="년도:" GridPane.rowIndex="3" />
+                                    <Label fx:id="year" text="1994년" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    
+                                    <Label text="장르:" GridPane.rowIndex="2" />
+                                    <Label fx:id="genre" text="로맨스 코미디" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                  
+                                    <Label text="줄거리:" GridPane.rowIndex="5" />
+                           	   	 	<TextArea fx:id="story" editable="false" prefHeight="200.0" prefWidth="200.0" text="재밌다&#10;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                
+                                    <Label text="평점:" GridPane.rowIndex="4" />
+                                    <Label fx:id="scoreAvg" text="4.7점" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                   
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="50.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="271.0" prefWidth="157.0">
+                           <children>
+                              <Label text="영화 기본 정보 ">
+                                 <font>
+                                    <Font name="NanumSquare ExtraBold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="50.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ImageView fx:id="imgView" fitHeight="238.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../resource/img/truemun.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="50.0" right="20.0" top="10.0" />
+                                 </VBox.margin></ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="299.0" prefWidth="675.0">
+                     <children>
+                        <BarChart fx:id="StartChart" prefHeight="238.0" prefWidth="500.0" titleSide="RIGHT">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <HBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </HBox.margin>
+                        </BarChart>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin></HBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="577.0" prefWidth="675.0">
+               <children>
+                  <VBox prefHeight="214.0" prefWidth="640.0">
+                     <children>
+                        <HBox prefHeight="95.0" prefWidth="590.0">
+                           <children>
+                              <GridPane prefHeight="95.0" prefWidth="257.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="81.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="68.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="57.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="52.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="보고싶어요">
+                                       <font>
+                                          <Font name="NanumSquareRound ExtraBold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="upBtn" mnemonicParsing="false" onAction="#ClickUpButton" text="업버튼" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="NanumBarunGothic" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="likeTotal" text="총버튼수" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="NanumGothicBold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="97.0" prefWidth="640.0">
+                           <children>
+                              <GridPane prefHeight="75.0" prefWidth="536.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.0" minWidth="10.0" prefWidth="74.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="88.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="91.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="110.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="63.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                
+                               	<!-- 00 라디오 버튼 그룹화  -->
+                      	 	    <fx:define> <ToggleGroup fx:id="radioGroup" /> </fx:define>
+                               
+                                 <children>
+                                    <Label text="별점 선택">
+                                       <font>
+                                          <Font name="NanumSquareRound ExtraBold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    
+                                    <RadioButton fx:id="rbtn1" ToggleGroup="$radioGroup" mnemonicParsing="false" text="★" textFill="#fac616" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="NanumSquareRound ExtraBold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbtn2" ToggleGroup="$radioGroup" mnemonicParsing="false" text="★★" textFill="#fac616" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="NanumSquareRound ExtraBold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbtn3" ToggleGroup="$radioGroup" mnemonicParsing="false" text="★★★" textFill="#fac616" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="NanumSquareRound ExtraBold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbtn4" ToggleGroup="$radioGroup" mnemonicParsing="false" text="★★★★" textFill="#fac616" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="NanumSquareRound ExtraBold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbtn5" ToggleGroup="$radioGroup" mnemonicParsing="false" text="★★★★★" textFill="#fac616" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="NanumSquareRound ExtraBold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Button mnemonicParsing="false" onAction="#SaveStarScore" text="별점저장" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                    <Label fx:id="choiceStart" text="" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="50.0" />
+                                 </HBox.margin>
+                              </GridPane>
+                           </children></HBox>
+                     </children>
+                  </VBox>
+                  
+                  <VBox prefHeight="343.0" prefWidth="640.0">
+                     <children>
+                        <GridPane prefHeight="317.0" prefWidth="540.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="592.0" minWidth="10.0" prefWidth="481.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="574.0" minWidth="10.0" prefWidth="59.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="574.0" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="68.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="181.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="152.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="리뷰작성하기">
+                                 <font>
+                                    <Font name="NanumSquareRound ExtraBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="writeReview" prefHeight="117.0" prefWidth="447.0" GridPane.rowIndex="1" />
+                              
+                              <Label text="내가 작성한 리뷰" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="NanumSquareRound ExtraBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="bestReview" editable="false" prefHeight="115.0" prefWidth="447.0" text="&#10;" wrapText="true" GridPane.rowIndex="4" />
+                              <Button mnemonicParsing="false" onAction="#SaveReview" text="리뷰저장" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button fx:id="moreBtn" mnemonicParsing="false" onAction="#moreReview" text="더보기" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </GridPane>
+                     </children>
+                     
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin></VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

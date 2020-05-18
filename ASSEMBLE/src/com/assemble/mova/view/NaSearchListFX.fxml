@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assemble.mova.controller.NaSearchListController">
+	<children>
+		<Pane layoutX="-2.0" prefHeight="145.0" prefWidth="1280.0" style="-fx-background-color: green;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label layoutX="88.0" layoutY="48.0" text="MOVA " textFill="WHITE">
+					<font>
+						<Font size="39.0" />
+					</font>
+				</Label>
+				<Label layoutX="91.0" layoutY="104.0" text="Since 2019" textFill="WHITE">
+					<font>
+						<Font size="13.0" />
+					</font>
+				</Label>
+				<Button fx:id="search1" layoutX="1089.0" layoutY="101.0" mnemonicParsing="false" onAction="#searchPage" text="메인홈" />
+            <Label fx:id="loginId" layoutX="989.0" layoutY="104.0" text="로그인명" textFill="WHITE">
+               <font>
+                  <Font name="NanumBarunGothic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="211.0" layoutY="66.0" prefHeight="26.0" prefWidth="56.0" text="&amp;" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="233.0" layoutY="64.0" text="NAVER" textFill="WHITE">
+               <font>
+                  <Font name="NanumGothic" size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="refreshBtn" layoutX="1159.0" layoutY="101.0" mnemonicParsing="false" onAction="#refreshPage" text="새로고침" />
+			</children>
+		</Pane>
+      <VBox layoutY="145.0" prefHeight="581.0" prefWidth="1280.0">
+         <children>
+            <Pane prefHeight="55.0" prefWidth="1280.0" />
+            <GridPane alignment="TOP_CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.0" minWidth="10.0" prefWidth="336.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1045.0" minWidth="10.0" prefWidth="553.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1045.0" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1045.0" minWidth="10.0" prefWidth="311.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="searchTitle" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="searchBtn" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchResult" text="검색" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="546.0" text="☆네이버 영화 검색 API☆" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="359.0" prefWidth="1280.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="100.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="10.0" prefWidth="300.0" />
+                <ColumnConstraints hgrow="NEVER" maxWidth="635.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="940.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="940.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="940.0" minWidth="10.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="202.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="277.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="225.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="203.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <ImageView fitHeight="206.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+               
+                  <VBox fx:id="vboxBtn01" alignment="TOP_CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle01" alignment="TOP_LEFT" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <WebView fx:id="wImg01" prefHeight="200.0" prefWidth="95.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></WebView>
+                        <Label fx:id="director1" alignment="TOP_LEFT" text="감독" />
+                        <Label fx:id="avgScore1" alignment="TOP_LEFT" text="평점1" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+                <VBox fx:id="vboxBtn02" alignment="TOP_CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle02" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <WebView fx:id="wImg02" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></WebView>
+                        <Label fx:id="director2" text="감독" />
+                          <Label fx:id="avgScore2" text="평점1" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+                  <VBox fx:id="vboxBtn03" alignment="TOP_CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle03" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <WebView fx:id="wImg03" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></WebView>
+                        <Label fx:id="director3" text="감독" />
+                         <Label fx:id="avgScore3" text="평점1" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+                <VBox fx:id="vboxBtn04" alignment="TOP_CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle04" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <WebView fx:id="wImg04" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></WebView>
+                        <Label fx:id="director4" text="감독" />
+                         <Label fx:id="avgScore4" text="평점1" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+          		  <VBox fx:id="vboxBtn05" alignment="TOP_CENTER" prefHeight="296.0" prefWidth="211.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="sTitle05" contentDisplay="CENTER" text="영화제목">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <WebView fx:id="wImg05" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></WebView>
+                        <Label fx:id="director5" text="감독" />
+                        <Label fx:id="avgScore5" text="평점1" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </VBox>
+                  
+               </children>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+	</children>
+</AnchorPane>
